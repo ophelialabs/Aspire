@@ -1,0 +1,12 @@
+/Users/jesse/Applications/Aspire/Database/SqlServer/bin/Debug/net9.0/SqlServer.deps.json
+/Users/jesse/Applications/Aspire/Database/SqlServer/bin/Debug/net9.0/SqlServer.dll
+/Users/jesse/Applications/Aspire/Database/SqlServer/bin/Debug/net9.0/SqlServer.pdb
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.csproj.AssemblyReference.cache
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.AssemblyInfoInputs.cache
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.AssemblyInfo.cs
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.csproj.CoreCompileInputs.cache
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.dll
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/refint/SqlServer.dll
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.pdb
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/ref/SqlServer.dll

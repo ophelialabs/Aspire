@@ -1,0 +1,12 @@
+/Users/jesse/Applications/Aspire/Database/PSQL/bin/Debug/net9.0/PSQL.deps.json
+/Users/jesse/Applications/Aspire/Database/PSQL/bin/Debug/net9.0/PSQL.dll
+/Users/jesse/Applications/Aspire/Database/PSQL/bin/Debug/net9.0/PSQL.pdb
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.csproj.AssemblyReference.cache
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.AssemblyInfoInputs.cache
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.AssemblyInfo.cs
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.csproj.CoreCompileInputs.cache
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.dll
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/refint/PSQL.dll
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.pdb
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/ref/PSQL.dll

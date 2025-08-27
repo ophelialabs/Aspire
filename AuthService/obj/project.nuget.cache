@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IxaCChzhfgc=",
+  "success": true,
+  "projectFilePath": "/Users/jesse/Applications/Aspire/AuthService/AuthService.csproj",
+  "expectedPackageFiles": [
+    "/Users/jesse/.nuget/packages/microsoft.aspnetcore.openapi/9.0.6/microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "/Users/jesse/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
