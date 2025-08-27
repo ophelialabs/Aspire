@@ -43,3 +43,4 @@
 /Users/jesse/Applications/Aspire/OracleDb/obj/Debug/net9.0/OracleDb.pdb
 /Users/jesse/Applications/Aspire/OracleDb/obj/Debug/net9.0/OracleDb.genruntimeconfig.cache
 /Users/jesse/Applications/Aspire/OracleDb/obj/Debug/net9.0/ref/OracleDb.dll
+/Users/jesse/Applications/Aspire/OracleDb/obj/Debug/net9.0/OracleDb.sourcelink.json

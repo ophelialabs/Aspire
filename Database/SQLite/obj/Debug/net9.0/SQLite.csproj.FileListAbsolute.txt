@@ -10,3 +10,4 @@
 /Users/jesse/Applications/Aspire/Database/SQLite/obj/Debug/net9.0/refint/SQLite.dll
 /Users/jesse/Applications/Aspire/Database/SQLite/obj/Debug/net9.0/SQLite.pdb
 /Users/jesse/Applications/Aspire/Database/SQLite/obj/Debug/net9.0/ref/SQLite.dll
+/Users/jesse/Applications/Aspire/Database/SQLite/obj/Debug/net9.0/SQLite.sourcelink.json

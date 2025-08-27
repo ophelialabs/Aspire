@@ -10,3 +10,4 @@
 /Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/refint/SqlServer.dll
 /Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.pdb
 /Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/ref/SqlServer.dll
+/Users/jesse/Applications/Aspire/Database/SqlServer/obj/Debug/net9.0/SqlServer.sourcelink.json

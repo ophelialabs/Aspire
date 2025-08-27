@@ -72,3 +72,4 @@
 /Users/jesse/Applications/Aspire/AspireApp.ApiService/obj/Debug/net9.0/AspireApp.ApiService.pdb
 /Users/jesse/Applications/Aspire/AspireApp.ApiService/obj/Debug/net9.0/AspireApp.ApiService.genruntimeconfig.cache
 /Users/jesse/Applications/Aspire/AspireApp.ApiService/obj/Debug/net9.0/ref/AspireApp.ApiService.dll
+/Users/jesse/Applications/Aspire/AspireApp.ApiService/obj/Debug/net9.0/AspireApp.ApiService.sourcelink.json

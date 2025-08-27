@@ -30,3 +30,4 @@
 /Users/jesse/Applications/Aspire/AccountService/obj/Debug/net9.0/AccountService.pdb
 /Users/jesse/Applications/Aspire/AccountService/obj/Debug/net9.0/AccountService.genruntimeconfig.cache
 /Users/jesse/Applications/Aspire/AccountService/obj/Debug/net9.0/ref/AccountService.dll
+/Users/jesse/Applications/Aspire/AccountService/obj/Debug/net9.0/AccountService.sourcelink.json

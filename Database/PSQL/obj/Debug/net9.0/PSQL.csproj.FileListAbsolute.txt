@@ -10,3 +10,4 @@
 /Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/refint/PSQL.dll
 /Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.pdb
 /Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/ref/PSQL.dll
+/Users/jesse/Applications/Aspire/Database/PSQL/obj/Debug/net9.0/PSQL.sourcelink.json

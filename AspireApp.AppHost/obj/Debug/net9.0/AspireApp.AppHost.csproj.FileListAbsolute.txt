@@ -134,3 +134,4 @@
 /Users/jesse/Applications/Aspire/AspireApp.AppHost/obj/Debug/net9.0/AspireApp.AppHost.pdb
 /Users/jesse/Applications/Aspire/AspireApp.AppHost/obj/Debug/net9.0/AspireApp.AppHost.genruntimeconfig.cache
 /Users/jesse/Applications/Aspire/AspireApp.AppHost/obj/Debug/net9.0/ref/AspireApp.AppHost.dll
+/Users/jesse/Applications/Aspire/AspireApp.AppHost/obj/Debug/net9.0/AspireApp.AppHost.sourcelink.json

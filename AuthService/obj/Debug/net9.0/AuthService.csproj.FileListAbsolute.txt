@@ -30,3 +30,4 @@
 /Users/jesse/Applications/Aspire/AuthService/obj/Debug/net9.0/AuthService.pdb
 /Users/jesse/Applications/Aspire/AuthService/obj/Debug/net9.0/AuthService.genruntimeconfig.cache
 /Users/jesse/Applications/Aspire/AuthService/obj/Debug/net9.0/ref/AuthService.dll
+/Users/jesse/Applications/Aspire/AuthService/obj/Debug/net9.0/AuthService.sourcelink.json
