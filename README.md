@@ -10,3 +10,4 @@
    - treat app.web as Core
    - create csp file for database directory that ref seperate dbs so project refs work accordingly
 ---
+   - Certain situations such as ntkb, jobid can be changed but jobtitle will remain the same and should reflect in pipeline like workday
