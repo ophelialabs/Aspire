@@ -1,0 +1,10 @@
+directions to connect to sql server instruct to create blazorweb app. 
+deploy using aspire orchestration in vs ==
+
+deploy using vsc create .net
+adding apphost and servicedefaults
+service defaults req overwrite sln
+=/!!
+
+treat app.web as Core
+create cs file for database directory that ref seperate dbs so project refs work accordingly?
