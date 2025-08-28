@@ -7,4 +7,4 @@ service defaults req overwrite sln
 =/!!
 
 treat app.web as Core
-create cs file for database directory that ref seperate dbs so project refs work accordingly?
+create csp file for database directory that ref seperate dbs so project refs work accordingly?
