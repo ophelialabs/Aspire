@@ -1,5 +1,5 @@
 # directions to connect to sql server 
-    - instruct to create blazorweb app. 
+    ** instruct to create blazorweb app. 
     - deploy using aspire orchestration in vs ==
 ---
     - deploy using vsc create .net
