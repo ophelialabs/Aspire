@@ -1,5 +1,6 @@
 using AspireApp.Web;
 using AspireApp.Web.Components;
+using AzureMapsControl.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,17 @@ builder.AddRedisOutputCache("cache");
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Register AI Assistant Service
+builder.Services.AddScoped<IAIAssistant, AIAssistant>();
+
+// Add Azure Maps
+builder.Services.AddAzureMapsControl(config =>
+{
+    config.SubscriptionKey = builder.Configuration["AzureMaps:SubscriptionKey"];
+    // Uncomment the following line if using ClientId authentication instead
+    // config.ClientId = builder.Configuration["AzureMaps:ClientId"];
+});
 
 builder.Services.AddHttpClient<WeatherApiClient>(client =>
     {

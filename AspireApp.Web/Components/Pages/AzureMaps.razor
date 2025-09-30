@@ -1,0 +1,117 @@
+﻿@page "/azuremaps"
+@using AzureMapsControl.Components.Map
+@using AzureMapsControl.Components.Atlas
+@using AzureMapsControl.Components.Controls
+@inject IConfiguration Configuration
+@inject IAIAssistant AIAssistant
+
+<PageTitle>Azure Maps</PageTitle>
+
+<div class="container-fluid">
+    <h1>Azure Maps</h1>
+    <div class="map-container" style="height: 500px; position: relative;">
+        <AzureMap Id="map"
+                  CameraOptions="@MapCamera"
+                  StyleOptions="@StyleOptions"
+                  EventActivationFlags="@EventFlags"
+                  OnReady="OnMapReady"
+                  OnClick="OnMapClick">
+            <Controls>
+                <ZoomControl />
+                <PitchControl />
+                <CompassControl />
+                <StyleControl />
+            </Controls>
+            @if (Markers.Any())
+            {
+                <HtmlMarkerLayer Options="@MarkerLayerOptions">
+                    @foreach (var marker in Markers)
+                    {
+                        <HtmlMarker Options="@marker" />
+                    }
+                </HtmlMarkerLayer>
+            }
+        </AzureMap>
+    </div>
+</div>
+
+@code {
+    private IMap? _map;
+    private CameraOptions MapCamera { get; set; } = new() { Center = new Position(0, 0), Zoom = 2 };
+    private List<HtmlMarkerOptions> Markers { get; set; } = new();
+    private HtmlMarkerLayerOptions MarkerLayerOptions { get; set; } = new();
+    
+    private MapEventActivationFlags EventFlags = MapEventActivationFlags
+        .None()
+        .Enable(
+            MapEventType.Ready,
+            MapEventType.Click,
+            MapEventType.DragStart,
+            MapEventType.DragEnd,
+            MapEventType.ZoomStart,
+            MapEventType.ZoomEnd
+        );
+
+    public StyleOptions StyleOptions { get; set; } = new()
+    {
+        Style = MapStyle.Road,
+        ShowLogo = false,
+        ShowFeedbackLink = false
+    };
+
+    private async Task OnMapReady(MapEventArgs events)
+    {
+        _map = events.Map;
+        await _map.SetCameraOptionsAsync(new CameraOptions
+        {
+            Center = new Position(-122.33, 47.60),
+            Zoom = 12
+        });
+    }
+
+    private async Task OnMapClick(MapMouseEventArgs events)
+    {
+        if (_map == null) return;
+
+        var marker = new HtmlMarkerOptions
+        {
+            Position = events.Position,
+            Popup = new PopupOptions
+            {
+                Content = $"Latitude: {events.Position.Latitude:F2}, Longitude: {events.Position.Longitude:F2}"
+            }
+        };
+
+        Markers.Add(marker);
+        StateHasChanged();
+    }
+
+    public async Task UpdateMapSettings(MapUpdateOptions options)
+    {
+        if (_map == null) return;
+
+        if (options.Center != null)
+        {
+            await _map.SetCameraOptionsAsync(new CameraOptions
+            {
+                Center = options.Center,
+                Zoom = options.Zoom ?? MapCamera.Zoom
+            });
+        }
+
+        if (options.Style.HasValue)
+        {
+            StyleOptions.Style = options.Style.Value;
+            await _map.SetStyleOptionsAsync(StyleOptions);
+        }
+
+        StateHasChanged();
+    }
+}
+
+public class MapUpdateOptions
+{
+    public Position? Center { get; set; }
+    public double? Zoom { get; set; }
+    public MapStyle? Style { get; set; }
+}

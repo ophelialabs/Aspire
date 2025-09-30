@@ -1,0 +1,173 @@
+@using AspireApp.Web.Services
+@inject IAIAssistant AIAssistant
+
+<div class="ai-assistant-sidebar @(_isExpanded ? "expanded" : "")">
+    <div class="ai-assistant-header">
+        <h3>AI Assistant</h3>
+        <button class="toggle-button" @onclick="ToggleExpanded">
+            @(_isExpanded ? "←" : "→")
+        </button>
+    </div>
+
+    <div class="ai-assistant-content">
+        <div class="messages-container">
+            @foreach (var message in _messages)
+            {
+                <div class="message @(message.IsUser ? "user" : "assistant")">
+                    <div class="message-content">@message.Content</div>
+                </div>
+            }
+        </div>
+
+        <div class="input-container">
+            <textarea 
+                @bind="_currentMessage" 
+                @bind:event="oninput"
+                @onkeypress="HandleKeyPress"
+                placeholder="Ask me anything..."
+                rows="3">
+            </textarea>
+            <button class="send-button" @onclick="SendMessage" disabled="@string.IsNullOrWhiteSpace(_currentMessage)">
+                Send
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .ai-assistant-sidebar {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 400px;
+        background-color: #f8f9fa;
+        border-left: 1px solid #dee2e6;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .ai-assistant-sidebar:not(.expanded) {
+        transform: translateX(360px);
+    }
+
+    .ai-assistant-header {
+        padding: 1rem;
+        border-bottom: 1px solid #dee2e6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .toggle-button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .ai-assistant-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .messages-container {
+        flex: 1;
+        overflow-y: auto;
+        margin-bottom: 1rem;
+    }
+
+    .message {
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        max-width: 80%;
+    }
+
+    .message.user {
+        background-color: #007bff;
+        color: white;
+        margin-left: auto;
+    }
+
+    .message.assistant {
+        background-color: #e9ecef;
+        color: black;
+        margin-right: auto;
+    }
+
+    .input-container {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .input-container textarea {
+        flex: 1;
+        resize: none;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+
+    .send-button {
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .send-button:disabled {
+        background-color: #6c757d;
+        cursor: not-allowed;
+    }
+</style>
+
+@code {
+    private bool _isExpanded = true;
+    private string _currentMessage = "";
+    private List<ChatMessage> _messages = new();
+
+    private void ToggleExpanded()
+    {
+        _isExpanded = !_isExpanded;
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && !e.ShiftKey)
+        {
+            await SendMessage();
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (string.IsNullOrWhiteSpace(_currentMessage))
+            return;
+
+        var userMessage = _currentMessage;
+        _messages.Add(new ChatMessage { Content = userMessage, IsUser = true });
+        _currentMessage = "";
+
+        StateHasChanged();
+
+        var response = await AIAssistant.ProcessMessageAsync(userMessage);
+        _messages.Add(new ChatMessage { Content = response, IsUser = false });
+
+        StateHasChanged();
+    }
+
+    private class ChatMessage
+    {
+        public string Content { get; set; }
+        public bool IsUser { get; set; }
+    }
+}
