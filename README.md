@@ -1,3 +1,5 @@
+**Repo unnecessary, consolidate information**
+
 # directions to connect to sql server
    - instructions to create blazorweb app. 
    - deploy using aspire orchestration in vs ==
